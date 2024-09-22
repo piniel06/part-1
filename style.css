@@ -1,0 +1,87 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+}
+
+.mail-box{
+  position: relative;
+  width: 50%;
+  margin-left: 150px;
+  /* width: 300px;
+  height: 200px;
+  overflow: hidden; */
+}
+
+.transition-img{
+  display: block;
+  width: 100%;
+  /* /* height: 100%; */
+  transition: all 0.5s ease;
+}
+
+.transition-img:active{
+  transform: scale(1.5);
+  opacity: 10;
+}
+
+.mail-btn{
+  position: absolute;
+  top: 57%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background: none;
+  background-color: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* .letter{
+  width: 100%;
+  height: 200px;
+  background-color: pink;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+  transition: all 0.5 ease;
+  margin-top: 20px;
+}
+
+.letter.show{
+  visibility: visible;
+  transform: 1;
+  opacity: 1;
+} */
+
+#hiddenLetter{
+  width: 300px;
+  height: 200px;
+  background-color: pink;
+  margin-top: 6px;
+  overflow-y: scroll;
+  /* overflow: hidden; */
+  max-height: 0;  /* Start the div with a max-height of 0 to hide it */
+  opacity: 0;     /* Initially invisible */
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  margin-left: 150px;
+}
+
+#hiddenLetter::-webkit-scrollbar{
+  display: none;
+}
+
+#hiddenLetter.show{
+  max-height: 200px;
+  opacity: 1;
+  margin-left: 150px;
+}
